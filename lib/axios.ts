@@ -25,7 +25,7 @@ api.interceptors.request.use(
       config.headers.Authorization = `Bearer ${token}`;
     }
     // 统一添加 proxy 前缀
-    config.url = `/proxy${config.url}`;
+    config.url = `/proxy/api${config.url}`;
     return config;
   },
   (error: any) => Promise.reject(error)
